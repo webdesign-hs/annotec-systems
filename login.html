@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Annotec Systems</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--background-light);
+        }
+        
+        .login-card {
+            background: var(--background-white);
+            border-radius: 16px;
+            padding: 60px 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-width: 400px;
+            max-width: 450px;
+            width: 100%;
+        }
+        
+        .login-logo {
+            margin-bottom: 40px;
+        }
+        
+        .login-logo img {
+            height: 60px;
+            width: auto;
+        }
+        
+        .login-title {
+            font-family: var(--font-headings);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+        }
+        
+        .login-form {
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+            text-align: left;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        
+        .password-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 16px 50px 16px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: var(--font-primary);
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 16px;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: color 0.3s ease;
+            user-select: none;
+            font-size: 20px;
+        }
+        
+        .password-toggle:hover {
+            color: var(--text-dark);
+        }
+        
+        .login-button {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .login-button:hover {
+            background: #7cb342;
+            transform: translateY(-1px);
+        }
+        
+        .error-message {
+            color: #e53e3e;
+            font-size: 14px;
+            margin-top: 16px;
+            padding: 12px;
+            background: #fed7d7;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        @media (max-width: 480px) {
+            .login-card {
+                min-width: unset;
+                margin: 20px;
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-logo">
+                <img src="images/Annotec_logo-1.png" alt="Annotec Systems">
+            </div>
+            
+            <h1 class="login-title">Willkommen</h1>
+            
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="password" class="form-label">Passwort eingeben</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" name="password" class="form-input" placeholder="Passwort für Annotec Systems eingeben" required>
+                        <span class="password-toggle" id="passwordToggle">👁️</span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="login-button">Anmelden</button>
+                
+                <div class="error-message" id="errorMessage">
+                    Ungültiges Passwort. Bitte versuchen Sie es erneut.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Authentication System -->
+    <script src="js/auth.js"></script>
+</body>
+</html>
