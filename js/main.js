@@ -191,26 +191,47 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
     
-    // Dropdown menu behavior for desktop
+    // Dropdown menu behavior for desktop and mobile
     const dropdownTriggers = document.querySelectorAll('.has-dropdown');
     dropdownTriggers.forEach(trigger => {
         const dropdown = trigger.querySelector('.dropdown-menu');
         let timeoutId;
         
-        trigger.addEventListener('mouseenter', function() {
-            clearTimeout(timeoutId);
-            dropdown.style.opacity = '1';
-            dropdown.style.visibility = 'visible';
-            dropdown.style.transform = 'translateY(0)';
-        });
+        // Desktop hover behavior
+        if (window.innerWidth > 768) {
+            trigger.addEventListener('mouseenter', function() {
+                clearTimeout(timeoutId);
+                dropdown.style.opacity = '1';
+                dropdown.style.visibility = 'visible';
+                dropdown.style.transform = 'translateY(0)';
+            });
+            
+            trigger.addEventListener('mouseleave', function() {
+                timeoutId = setTimeout(() => {
+                    dropdown.style.opacity = '0';
+                    dropdown.style.visibility = 'hidden';
+                    dropdown.style.transform = 'translateY(-10px)';
+                }, 100);
+            });
+        }
         
-        trigger.addEventListener('mouseleave', function() {
-            timeoutId = setTimeout(() => {
-                dropdown.style.opacity = '0';
-                dropdown.style.visibility = 'hidden';
-                dropdown.style.transform = 'translateY(-10px)';
-            }, 100);
-        });
+        // Mobile click behavior
+        const triggerLink = trigger.querySelector('a');
+        if (triggerLink) {
+            triggerLink.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    trigger.classList.toggle('active');
+                    
+                    // Close other dropdowns
+                    dropdownTriggers.forEach(otherTrigger => {
+                        if (otherTrigger !== trigger) {
+                            otherTrigger.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        }
     });
     
     // Lazy loading for images

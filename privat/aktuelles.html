@@ -32,7 +32,7 @@
                         </li>
                         <li><a href="ueber-uns.html">Über uns</a></li>
                         <li><a href="aktuelles.html" class="active">Aktuelles</a></li>
-                        <li><a href="kontakt.html" class="cta-nav-button" style="background: var(--accent-color); color: var(--text-dark); padding: 8px 16px; border-radius: 20px; font-weight: 600;">Kontakt</a></li>
+                        <li><a href="kontakt.html" class="btn btn-primary cta-nav-button">Kontakt</a></li>
                     </ul>
                 </nav>
                 
@@ -60,17 +60,17 @@
 
     <!-- Hero Image -->
     <section style="padding: 0; margin: 0;">
-        <img src="../images/Lichtdecken-privater-Bereich-Wohnzimmer-2.jpg" alt="Aktuelles Privatkunden" style="width: 100vw; height: 400px; object-fit: cover; display: block; margin: 0; padding: 0;">
+        <img src="../images/Lichtdecken-privater-Bereich-Wohnzimmer-2.jpg" alt="Aktuelles Privatkunden" class="responsive-img" style="width: 100vw; height: clamp(250px, 50vh, 400px); object-fit: cover; display: block; margin: 0; padding: 0;">
     </section>
 
     <!-- Hero Section -->
     <section class="hero" style="padding: 80px 0 60px; background: var(--background-white);">
         <div class="e-con-boxed">
             <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
-                <h1 class="fade-in" style="font-family: var(--font-headings); font-size: 48px; font-weight: 700; margin-bottom: 20px; color: var(--text-dark); text-transform: uppercase; letter-spacing: 2px;">AKTUELLES</h1>
-                <p class="fade-in" style="font-family: var(--font-headings); font-size: 24px; font-weight: 600; margin-bottom: 30px; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;">ANNOTEC SYSTEMS</p>
-                <h2 class="fade-in" style="font-size: 28px; font-weight: 600; margin-bottom: 40px; color: var(--text-dark); line-height: 1.4;">News und Projekte für Privatkunden</h2>
-                <p class="fade-in" style="font-size: 18px; color: var(--text-light); line-height: 1.8; margin-bottom: 60px;">
+                <h1 class="fade-in" style="font-family: var(--font-headings); font-size: clamp(28px, 5vw, 48px); font-weight: 700; margin-bottom: 20px; color: var(--text-dark); text-transform: uppercase; letter-spacing: 2px;">AKTUELLES</h1>
+                <p class="fade-in" style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 24px); font-weight: 600; margin-bottom: 30px; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;">ANNOTEC SYSTEMS</p>
+                <h2 class="fade-in" style="font-size: clamp(20px, 4vw, 28px); font-weight: 600; margin-bottom: 40px; color: var(--text-dark); line-height: 1.4;">News und Projekte für Privatkunden</h2>
+                <p class="fade-in" style="font-size: clamp(16px, 2vw, 18px); color: var(--text-light); line-height: 1.8; margin-bottom: 60px;">
                     Entdecken Sie unsere neuesten Projekte im privaten Bereich. Von stimmungsvollen Lichtdecken im Wohnzimmer bis hin zu funktionalen Akustiklösungen im Home-Office – lassen Sie sich von den Möglichkeiten für Ihr Zuhause inspirieren.
                 </p>
             </div>
@@ -80,18 +80,18 @@
     <!-- News Grid -->
     <section class="section">
         <div class="e-con-boxed">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+            <div class="service-cards">
                 
                 <!-- News Item 1 -->
-                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <article class="fade-in card-hover" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                     <div style="position: relative; cursor: pointer;" onclick="openLightbox('../images/Lichtdecken-privater-Bereich-Badezimmer-1.jpg', 'Wellness-Badezimmer mit Lichtdecke')">
-                        <img src="../images/Lichtdecken-privater-Bereich-Badezimmer-1.jpg" alt="Lichtdecke Badezimmer" style="width: 100%; height: 250px; object-fit: cover;">
+                        <img src="../images/Lichtdecken-privater-Bereich-Badezimmer-1.jpg" alt="Lichtdecke Badezimmer" class="responsive-img" class="responsive-img" style="width: 100%; height: 250px; object-fit: cover;">
                         <div style="position: absolute; top: 15px; right: 15px; background: var(--primary-color); color: white; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
                             Januar 2025
                         </div>
                     </div>
                     <div style="padding: 30px;">
-                        <h3 style="font-family: var(--font-headings); font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Wellness-Badezimmer mit Lichtdecke</h3>
+                        <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Wellness-Badezimmer mit Lichtdecke</h3>
                         <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">
                             Spa-Feeling zu Hause: Ein privates Badezimmer in Mönchengladbach wurde mit einer stimmungsvollen Lichtdecke ausgestattet. Dimmbares LED-Licht für jeden Moment des Tages.
                         </p>
@@ -106,15 +106,15 @@
                 </article>
 
                 <!-- News Item 2 -->
-                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" class="card-hover">
                     <div style="position: relative; cursor: pointer;" onclick="openLightbox('../images/01.01_Spanndecken_privater_bereich_wohnzimmer-1.jpg', 'Moderne Spanndecke im Wohnzimmer')">
-                        <img src="../images/01.01_Spanndecken_privater_bereich_wohnzimmer-1.jpg" alt="Spanndecke Wohnzimmer" style="width: 100%; height: 250px; object-fit: cover;">
+                        <img src="../images/01.01_Spanndecken_privater_bereich_wohnzimmer-1.jpg" alt="Spanndecke Wohnzimmer" class="responsive-img" style="width: 100%; height: 250px; object-fit: cover;">
                         <div style="position: absolute; top: 15px; right: 15px; background: var(--accent-color); color: var(--text-dark); padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
                             Dezember 2024
                         </div>
                     </div>
                     <div style="padding: 30px;">
-                        <h3 style="font-family: var(--font-headings); font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Elegantes Wohnzimmer-Makeover</h3>
+                        <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Elegantes Wohnzimmer-Makeover</h3>
                         <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">
                             Von alt zu modern: Ein Wohnzimmer in Geilenkirchen erstrahlt mit neuer Hochglanz-Spanndecke in neuem Glanz. Die spiegelnde Oberfläche lässt den Raum größer und heller wirken.
                         </p>
@@ -129,15 +129,15 @@
                 </article>
 
                 <!-- News Item 3 -->
-                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" class="card-hover">
                     <div style="position: relative; cursor: pointer;" onclick="openLightbox('../images/Akustikdecke-privater-Bereich-Wohnzimmer-1.jpg', 'Akustikdecke im Home-Office')">
-                        <img src="../images/Akustikdecke-privater-Bereich-Wohnzimmer-1.jpg" alt="Akustikdecke Wohnzimmer" style="width: 100%; height: 250px; object-fit: cover;">
+                        <img src="../images/Akustikdecke-privater-Bereich-Wohnzimmer-1.jpg" alt="Akustikdecke Wohnzimmer" class="responsive-img" style="width: 100%; height: 250px; object-fit: cover;">
                         <div style="position: absolute; top: 15px; right: 15px; background: var(--primary-color); color: white; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
                             November 2024
                         </div>
                     </div>
                     <div style="padding: 30px;">
-                        <h3 style="font-family: var(--font-headings); font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Ruhiges Home-Office</h3>
+                        <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Ruhiges Home-Office</h3>
                         <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">
                             Konzentriert arbeiten von zu Hause: Eine Akustikdecke im Home-Office in Düsseldorf sorgt für bessere Konzentration und reduziert störende Nebengeräusche aus dem Familienleben.
                         </p>
@@ -152,15 +152,15 @@
                 </article>
 
                 <!-- News Item 4 -->
-                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" class="card-hover">
                     <div style="position: relative; cursor: pointer;" onclick="openLightbox('../images/06.05_LED_privater-Bereich_kueche-1.jpg', 'LED-Küchendecke')">
-                        <img src="../images/06.05_LED_privater-Bereich_kueche-1.jpg" alt="LED Küche" style="width: 100%; height: 250px; object-fit: cover;">
+                        <img src="../images/06.05_LED_privater-Bereich_kueche-1.jpg" alt="LED Küche" class="responsive-img" style="width: 100%; height: 250px; object-fit: cover;">
                         <div style="position: absolute; top: 15px; right: 15px; background: var(--accent-color); color: var(--text-dark); padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
                             Oktober 2024
                         </div>
                     </div>
                     <div style="padding: 30px;">
-                        <h3 style="font-family: var(--font-headings); font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Moderne Küchen-Beleuchtung</h3>
+                        <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Moderne Küchen-Beleuchtung</h3>
                         <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">
                             Perfektes Licht zum Kochen: Eine neue LED-Küchendecke in Köln sorgt für optimale Ausleuchtung der Arbeitsflächen und schafft gleichzeitig eine gemütliche Atmosphäre beim Essen.
                         </p>
@@ -175,15 +175,15 @@
                 </article>
 
                 <!-- News Item 5 -->
-                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" class="card-hover">
                     <div style="position: relative; cursor: pointer;" onclick="openLightbox('../images/Lichtdecken-privater-Bereich-Flur-1.jpg', 'Einladender Flur mit Lichtdecke')">
-                        <img src="../images/Lichtdecken-privater-Bereich-Flur-1.jpg" alt="Lichtdecke Flur" style="width: 100%; height: 250px; object-fit: cover;">
+                        <img src="../images/Lichtdecken-privater-Bereich-Flur-1.jpg" alt="Lichtdecke Flur" class="responsive-img" style="width: 100%; height: 250px; object-fit: cover;">
                         <div style="position: absolute; top: 15px; right: 15px; background: var(--primary-color); color: white; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
                             September 2024
                         </div>
                     </div>
                     <div style="padding: 30px;">
-                        <h3 style="font-family: var(--font-headings); font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Einladender Hausflur</h3>
+                        <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Einladender Hausflur</h3>
                         <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">
                             Erster Eindruck zählt: Ein dunkler Flur in Heinsberg wurde mit einer hellen Lichtdecke zu einem freundlichen Empfangsbereich verwandelt. Warmweißes Licht schafft sofort Wohlfühlatmosphäre.
                         </p>
@@ -198,15 +198,15 @@
                 </article>
 
                 <!-- News Item 6 -->
-                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" class="card-hover">
                     <div style="position: relative; cursor: pointer;" onclick="openLightbox('../images/04.2_Tuchbespannung_Privater_Bereich_Buero-1.jpg', 'Tuchbespannung im Arbeitszimmer')">
-                        <img src="../images/04.2_Tuchbespannung_Privater_Bereich_Buero-1.jpg" alt="Tuchbespannung Büro" style="width: 100%; height: 250px; object-fit: cover;">
+                        <img src="../images/04.2_Tuchbespannung_Privater_Bereich_Buero-1.jpg" alt="Tuchbespannung Büro" class="responsive-img" style="width: 100%; height: 250px; object-fit: cover;">
                         <div style="position: absolute; top: 15px; right: 15px; background: var(--accent-color); color: var(--text-dark); padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
                             August 2024
                         </div>
                     </div>
                     <div style="padding: 30px;">
-                        <h3 style="font-family: var(--font-headings); font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Gemütliches Arbeitszimmer</h3>
+                        <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Gemütliches Arbeitszimmer</h3>
                         <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">
                             Textil-Charme im Büro: Eine warme Tuchbespannung in einem privaten Arbeitszimmer in Aachen schafft eine wohnliche Atmosphäre und verbessert gleichzeitig die Raumakustik.
                         </p>
@@ -228,13 +228,13 @@
     <section class="section" style="background: var(--accent-color); color: var(--text-dark);">
         <div class="e-con-boxed">
             <div style="text-align: center;">
-                <h2 class="fade-in" style="font-family: var(--font-headings); font-size: 36px; font-weight: 600; margin-bottom: 20px;">Verwirklichen Sie Ihr Traum-Zuhause</h2>
-                <p class="fade-in" style="font-size: 20px; margin-bottom: 40px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h2 class="fade-in" style="font-family: var(--font-headings); font-size: clamp(24px, 5vw, 36px); font-weight: 600; margin-bottom: 20px;">Verwirklichen Sie Ihr Traum-Zuhause</h2>
+                <p class="fade-in" style="font-size: clamp(16px, 3vw, 20px); margin-bottom: 40px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
                     Lassen Sie sich von unseren Wohnprojekten inspirieren und gestalten Sie Ihr Zuhause mit innovativen Deckenlösungen von Annotec Systems.
                 </p>
                 <div class="fade-in">
-                    <a href="kontakt.html" class="btn" style="background: var(--primary-color); color: white; margin-right: 20px;">Beratung vereinbaren</a>
-                    <a href="tel:+4917131659369" class="btn" style="background: transparent; color: var(--text-dark); border: 2px solid var(--text-dark);">+49 171 31 65 936</a>
+                    <a href="kontakt.html" class="btn btn-primary" style="margin-right: 20px;">Beratung vereinbaren</a>
+                    <a href="tel:+4917131659369" class="btn btn-secondary">+49 171 31 65 936</a>
                 </div>
             </div>
         </div>

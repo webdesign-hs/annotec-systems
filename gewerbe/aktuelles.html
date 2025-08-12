@@ -32,7 +32,7 @@
                         </li>
                         <li><a href="ueber-uns.html">Über uns</a></li>
                         <li><a href="aktuelles.html" class="active">Aktuelles</a></li>
-                        <li><a href="kontakt.html" class="cta-nav-button" style="background: var(--accent-color); color: var(--text-dark); padding: 8px 16px; border-radius: 20px; font-weight: 600;">Kontakt</a></li>
+                        <li><a href="kontakt.html" class="btn btn-primary cta-nav-button">Kontakt</a></li>
                     </ul>
                 </nav>
                 
@@ -60,17 +60,17 @@
 
     <!-- Hero Image -->
     <section style="padding: 0; margin: 0;">
-        <img src="../images/Lichtdecken-Buero-Fraunhofer-1.jpg" alt="Aktuelles Gewerbekunden" style="width: 100vw; height: 400px; object-fit: cover; display: block; margin: 0; padding: 0;">
+        <img src="../images/Lichtdecken-Buero-Fraunhofer-1.jpg" alt="Aktuelles Gewerbekunden" class="responsive-img" style="width: 100vw; height: clamp(250px, 50vw, 400px); object-fit: cover; display: block; margin: 0; padding: 0;">
     </section>
 
     <!-- Hero Section -->
     <section class="hero" style="padding: 80px 0 60px; background: var(--background-white);">
         <div class="e-con-boxed">
             <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
-                <h1 class="fade-in" style="font-family: var(--font-headings); font-size: 48px; font-weight: 700; margin-bottom: 20px; color: var(--text-dark); text-transform: uppercase; letter-spacing: 2px;">AKTUELLES</h1>
-                <p class="fade-in" style="font-family: var(--font-headings); font-size: 24px; font-weight: 600; margin-bottom: 30px; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;">ANNOTEC SYSTEMS</p>
-                <h2 class="fade-in" style="font-size: 28px; font-weight: 600; margin-bottom: 40px; color: var(--text-dark); line-height: 1.4;">News und Projekte für Gewerbekunden</h2>
-                <p class="fade-in" style="font-size: 18px; color: var(--text-light); line-height: 1.8; margin-bottom: 60px;">
+                <h1 class="fade-in" style="font-family: var(--font-headings); font-size: clamp(28px, 5vw, 48px); font-weight: 700; margin-bottom: 20px; color: var(--text-dark); text-transform: uppercase; letter-spacing: 2px;">AKTUELLES</h1>
+                <p class="fade-in" style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 24px); font-weight: 600; margin-bottom: 30px; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;">ANNOTEC SYSTEMS</p>
+                <h2 class="fade-in" style="font-size: clamp(20px, 4vw, 28px); font-weight: 600; margin-bottom: 40px; color: var(--text-dark); line-height: 1.4;">News und Projekte für Gewerbekunden</h2>
+                <p class="fade-in" style="font-size: clamp(16px, 2.5vw, 18px); color: var(--text-light); line-height: 1.8; margin-bottom: 60px;">
                     Entdecken Sie unsere neuesten gewerblichen Projekte. Von innovativen Lüftungsdecken in Bürogebäuden bis hin zu Akustiklösungen in Restaurants – erfahren Sie, wie wir Unternehmen dabei helfen, ihre Räume zu optimieren.
                 </p>
             </div>
@@ -80,18 +80,18 @@
     <!-- News Grid -->
     <section class="section">
         <div class="e-con-boxed">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+            <div class="news-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
                 
                 <!-- News Item 1 -->
-                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div style="position: relative; cursor: pointer;" onclick="openLightbox('../images/Lichtdecken-Buero-Bank-1.jpg', 'Moderne Lichtdecke in Bankfiliale')">
-                        <img src="../images/Lichtdecken-Buero-Bank-1.jpg" alt="Lichtdecke Bankfiliale" style="width: 100%; height: 250px; object-fit: cover;">
+                <article class="fade-in news-card">
+                    <div class="news-image" onclick="openLightbox('../images/Lichtdecken-Buero-Bank-1.jpg', 'Moderne Lichtdecke in Bankfiliale')">
+                        <img src="../images/Lichtdecken-Buero-Bank-1.jpg" alt="Lichtdecke Bankfiliale" class="responsive-img">
                         <div style="position: absolute; top: 15px; right: 15px; background: var(--primary-color); color: white; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
                             Januar 2025
                         </div>
                     </div>
-                    <div style="padding: 30px;">
-                        <h3 style="font-family: var(--font-headings); font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Moderne Lichtdecke für Bankfiliale</h3>
+                    <div class="news-content">
+                        <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Moderne Lichtdecke für Bankfiliale</h3>
                         <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">
                             Erfolgreich realisiert: Eine repräsentative Lichtdecke in einer Bankfiliale in Düsseldorf. Die gleichmäßige, blendfreie Ausleuchtung schafft eine professionelle und einladende Atmosphäre für Kunden und Mitarbeiter.
                         </p>
@@ -106,15 +106,15 @@
                 </article>
 
                 <!-- News Item 2 -->
-                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div style="position: relative; cursor: pointer;" onclick="openLightbox('../images/Akustikdeckke-gewerblicher-Breich-Restaurant-3.jpg', 'Akustikdecke im Restaurant')">
-                        <img src="../images/Akustikdeckke-gewerblicher-Breich-Restaurant-3.jpg" alt="Akustikdecke Restaurant" style="width: 100%; height: 250px; object-fit: cover;">
+                <article class="fade-in news-card">
+                    <div class="news-image" onclick="openLightbox('../images/Akustikdeckke-gewerblicher-Breich-Restaurant-3.jpg', 'Akustikdecke im Restaurant')">
+                        <img src="../images/Akustikdeckke-gewerblicher-Breich-Restaurant-3.jpg" alt="Akustikdecke Restaurant" class="responsive-img">
                         <div style="position: absolute; top: 15px; right: 15px; background: var(--accent-color); color: var(--text-dark); padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
                             Dezember 2024
                         </div>
                     </div>
-                    <div style="padding: 30px;">
-                        <h3 style="font-family: var(--font-headings); font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Akustiklösung für Restaurant</h3>
+                    <div class="news-content">
+                        <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Akustiklösung für Restaurant</h3>
                         <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">
                             Ruhige Atmosphäre trotz voller Tische: Unsere Akustikdecke in einem Restaurant in Köln sorgt für angenehme Gesprächskultur und reduziert störende Nebengeräusche erheblich.
                         </p>
@@ -129,15 +129,15 @@
                 </article>
 
                 <!-- News Item 3 -->
-                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div style="position: relative; cursor: pointer;" onclick="openLightbox('../images/02.6-Klimadecken-Schwimmbad-Wellnessbereich-1.jpg', 'Klimadecke im Wellnessbereich')">
-                        <img src="../images/02.6-Klimadecken-Schwimmbad-Wellnessbereich-1.jpg" alt="Klimadecke Wellness" style="width: 100%; height: 250px; object-fit: cover;">
+                <article class="fade-in news-card">
+                    <div class="news-image" onclick="openLightbox('../images/02.6-Klimadecken-Schwimmbad-Wellnessbereich-1.jpg', 'Klimadecke im Wellnessbereich')">
+                        <img src="../images/02.6-Klimadecken-Schwimmbad-Wellnessbereich-1.jpg" alt="Klimadecke Wellness" class="responsive-img">
                         <div style="position: absolute; top: 15px; right: 15px; background: var(--primary-color); color: white; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
                             November 2024
                         </div>
                     </div>
-                    <div style="padding: 30px;">
-                        <h3 style="font-family: var(--font-headings); font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Wellness-Hotel mit Klimadecke</h3>
+                    <div class="news-content">
+                        <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Wellness-Hotel mit Klimadecke</h3>
                         <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">
                             Perfektes Raumklima im Wellnessbereich: Die neue Klimadecke in einem Hotel-Spa in Aachen sorgt für konstante Temperaturen und optimale Luftfeuchtigkeit – ideal für Gäste-Entspannung.
                         </p>
@@ -152,15 +152,15 @@
                 </article>
 
                 <!-- News Item 4 -->
-                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div style="position: relative; cursor: pointer;" onclick="openLightbox('../images/Lichtdecken-Gesundheitsbereich-Empfang-Praxis-1.jpg', 'Lichtdecke im Praxis-Empfang')">
-                        <img src="../images/Lichtdecken-Gesundheitsbereich-Empfang-Praxis-1.jpg" alt="Lichtdecke Arztpraxis" style="width: 100%; height: 250px; object-fit: cover;">
+                <article class="fade-in news-card">
+                    <div class="news-image" onclick="openLightbox('../images/Lichtdecken-Gesundheitsbereich-Empfang-Praxis-1.jpg', 'Lichtdecke im Praxis-Empfang')">
+                        <img src="../images/Lichtdecken-Gesundheitsbereich-Empfang-Praxis-1.jpg" alt="Lichtdecke Arztpraxis" class="responsive-img">
                         <div style="position: absolute; top: 15px; right: 15px; background: var(--accent-color); color: var(--text-dark); padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
                             Oktober 2024
                         </div>
                     </div>
-                    <div style="padding: 30px;">
-                        <h3 style="font-family: var(--font-headings); font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Praxis-Empfang mit Wohlfühlatmosphäre</h3>
+                    <div class="news-content">
+                        <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Praxis-Empfang mit Wohlfühlatmosphäre</h3>
                         <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">
                             Beruhigend und professionell: Der Empfangsbereich einer Arztpraxis in Heinsberg wurde mit einer warmweißen Lichtdecke ausgestattet, die Patienten entspannt und das Personal entlastet.
                         </p>
@@ -175,15 +175,15 @@
                 </article>
 
                 <!-- News Item 5 -->
-                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div style="position: relative; cursor: pointer;" onclick="openLightbox('../images/Lichtdecken-Buero-Meetingraum-1.jpg', 'Lichtdecke im Meetingraum')">
-                        <img src="../images/Lichtdecken-Buero-Meetingraum-1.jpg" alt="Lichtdecke Meetingraum" style="width: 100%; height: 250px; object-fit: cover;">
+                <article class="fade-in news-card">
+                    <div class="news-image" onclick="openLightbox('../images/Lichtdecken-Buero-Meetingraum-1.jpg', 'Lichtdecke im Meetingraum')">
+                        <img src="../images/Lichtdecken-Buero-Meetingraum-1.jpg" alt="Lichtdecke Meetingraum" class="responsive-img">
                         <div style="position: absolute; top: 15px; right: 15px; background: var(--primary-color); color: white; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
                             September 2024
                         </div>
                     </div>
-                    <div style="padding: 30px;">
-                        <h3 style="font-family: var(--font-headings); font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Produktiver Meetingraum</h3>
+                    <div class="news-content">
+                        <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Produktiver Meetingraum</h3>
                         <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">
                             Bessere Meetings durch optimale Beleuchtung: Ein Konferenzraum in einem Bürogebäude in Mönchengladbach erhielt eine dimmbare Lichtdecke für unterschiedliche Besprechungsformate.
                         </p>
@@ -198,15 +198,15 @@
                 </article>
 
                 <!-- News Item 6 -->
-                <article class="fade-in" style="background: var(--background-white); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div style="position: relative; cursor: pointer;" onclick="openLightbox('../images/Akustikdecke-gewerblicher-Bereich-Arztpraxis-1.jpg', 'Akustikdecke in Arztpraxis')">
-                        <img src="../images/Akustikdecke-gewerblicher-Bereich-Arztpraxis-1.jpg" alt="Akustikdecke Arztpraxis" style="width: 100%; height: 250px; object-fit: cover;">
+                <article class="fade-in news-card">
+                    <div class="news-image" onclick="openLightbox('../images/Akustikdecke-gewerblicher-Bereich-Arztpraxis-1.jpg', 'Akustikdecke in Arztpraxis')">
+                        <img src="../images/Akustikdecke-gewerblicher-Bereich-Arztpraxis-1.jpg" alt="Akustikdecke Arztpraxis" class="responsive-img">
                         <div style="position: absolute; top: 15px; right: 15px; background: var(--accent-color); color: var(--text-dark); padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
                             August 2024
                         </div>
                     </div>
-                    <div style="padding: 30px;">
-                        <h3 style="font-family: var(--font-headings); font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Diskrete Praxis-Kommunikation</h3>
+                    <div class="news-content">
+                        <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Diskrete Praxis-Kommunikation</h3>
                         <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">
                             Vertraulichkeit durch Akustik: Eine Zahnarztpraxis in Erkelenz erhielt Akustikdecken im Wartezimmer und in den Behandlungsräumen für mehr Privatsphäre und Diskretion.
                         </p>
@@ -228,13 +228,13 @@
     <section class="section" style="background: var(--accent-color); color: var(--text-dark);">
         <div class="e-con-boxed">
             <div style="text-align: center;">
-                <h2 class="fade-in" style="font-family: var(--font-headings); font-size: 36px; font-weight: 600; margin-bottom: 20px;">Ihr Geschäftserfolg durch optimale Räume</h2>
-                <p class="fade-in" style="font-size: 20px; margin-bottom: 40px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h2 class="fade-in" style="font-family: var(--font-headings); font-size: clamp(24px, 4.5vw, 36px); font-weight: 600; margin-bottom: 20px;">Ihr Geschäftserfolg durch optimale Räume</h2>
+                <p class="fade-in" style="font-size: clamp(16px, 2.8vw, 20px); margin-bottom: 40px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
                     Lassen Sie sich von unseren gewerblichen Projekten inspirieren und optimieren Sie Ihre Geschäftsräume mit professionellen Deckenlösungen.
                 </p>
-                <div class="fade-in">
-                    <a href="kontakt.html" class="btn" style="background: var(--primary-color); color: white; margin-right: 20px;">Projektberatung</a>
-                    <a href="tel:+4917131659369" class="btn" style="background: transparent; color: var(--text-dark); border: 2px solid var(--text-dark);">+49 171 31 65 936</a>
+                <div class="fade-in cta-buttons">
+                    <a href="kontakt.html" class="btn btn-primary" style="margin-right: 20px;">Projektberatung</a>
+                    <a href="tel:+4917131659369" class="btn btn-secondary">+49 171 31 65 936</a>
                 </div>
             </div>
         </div>

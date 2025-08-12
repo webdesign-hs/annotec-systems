@@ -74,8 +74,13 @@
     </header>
 
     <!-- Hero Image -->
-    <section style="padding: 0; margin: 0;">
-        <img src="images/nachher_spanndecke_kueche-1-scaled-1.jpg" alt="Annotec Systems Deckenlösungen" style="width: 100vw; height: 550px; object-fit: cover; object-position: top; display: block; margin: 0; padding: 0;">
+    <section class="hero-image">
+        <img src="images/nachher_spanndecke_kueche-1-scaled-1.jpg" alt="Annotec Systems Deckenlösungen">
+        <div class="hero-overlay"></div>
+        <div class="hero-image-content">
+            <h1 class="fade-in">Stilvolle Deckenlösungen</h1>
+            <p class="fade-in">Verwandeln Sie Ihre Räume mit innovativen Spanndecken</p>
+        </div>
     </section>
 
     <!-- Divider -->
@@ -90,21 +95,21 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0 60px; background: var(--background-white);">
+    <section class="section">
         <div class="e-con-boxed">
-            <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
-                <p class="fade-in" style="font-family: var(--font-headings); font-size: 24px; font-weight: 600; margin-bottom: 30px; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;">ANNOTEC SYSTEMS</p>
-                <h2 class="fade-in" style="font-size: 28px; font-weight: 600; margin-bottom: 40px; color: var(--text-dark); line-height: 1.4;">Ihr Experte für stilvolle Deckenlösungen</h2>
-                <p class="fade-in" style="font-size: 18px; color: var(--text-light); line-height: 1.8; margin-bottom: 30px;">
+            <div class="hero-content">
+                <p class="fade-in" style="font-family: var(--font-headings); font-size: clamp(18px, 5vw, 24px); font-weight: 600; margin-bottom: 30px; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;">ANNOTEC SYSTEMS</p>
+                <h2 class="section-title fade-in">Ihr Experte für stilvolle Deckenlösungen</h2>
+                <p class="section-subtitle fade-in">
                     Willkommen bei Annotec Systems – Ihrem Meisterbetrieb für moderne Decken- und Wandlösungen.
                 </p>
-                <p class="fade-in" style="font-size: 18px; color: var(--text-light); line-height: 1.8; margin-bottom: 30px;">
+                <p class="fade-in" style="font-size: clamp(16px, 2.5vw, 18px); color: var(--text-light); line-height: 1.8; margin-bottom: 30px;">
                     Seit über 25 Jahren stehen wir für hochwertige Ausführung, innovative Technik und gestalterischen Anspruch. Unsere Lösungen reichen von stilvollen Spanndecken über durchdachte Akustiksysteme bis hin zu integrierten Licht- und Klimadecken – individuell geplant, professionell umgesetzt.
                 </p>
-                <p class="fade-in" style="font-size: 18px; color: var(--text-light); line-height: 1.8; margin-bottom: 30px;">
+                <p class="fade-in" style="font-size: clamp(16px, 2.5vw, 18px); color: var(--text-light); line-height: 1.8; margin-bottom: 30px;">
                     Ob Sie private Wohnräume verschönern oder gewerbliche Räume funktional und repräsentativ gestalten möchten – wir bieten Ihnen maßgeschneiderte Lösungen, die Komfort, Technik und Design vereinen. Auch in denkmalgeschützten Gebäuden oder bei besonderen Anforderungen arbeiten wir ohne Eingriffe in die Bausubstanz – ökologisch sinnvoll und bauschonend.
                 </p>
-                <p class="fade-in" style="font-size: 18px; color: var(--text-light); line-height: 1.8; margin-bottom: 20px;">
+                <p class="fade-in" style="font-size: clamp(16px, 2.5vw, 18px); color: var(--text-light); line-height: 1.8; margin-bottom: 20px;">
                     Entdecken Sie auf den folgenden Seiten unsere Leistungen für Privat- und Gewerbekunden. Finden Sie heraus, welche Lösungen zu Ihnen passen – wir beraten Sie gerne persönlich.
                 </p>
             </div>
@@ -125,26 +130,26 @@
     <!-- Service Selection -->
     <section class="section">
         <div class="e-con-boxed">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+            <div class="service-cards">
                 
                 <!-- Privatkunden -->
-                <div class="fade-in" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 40px; text-align: center; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.05);" onclick="window.location.href='privat/index.html'" onmouseover="this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'; this.style.transform='translateY(0)'">
+                <div class="service-card fade-in" onclick="window.location.href='privat/index.html'">
                     <i data-lucide="home" style="width: 48px; height: 48px; color: var(--primary-color); margin-bottom: 20px;"></i>
-                    <h3 style="font-family: var(--font-headings); font-size: 28px; font-weight: 700; margin-bottom: 15px; color: var(--text-dark);">Privatkunden</h3>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 25px; font-size: 16px;">
+                    <h3>Privatkunden</h3>
+                    <p>
                         Ob Wohnzimmer, Bad oder Schwimmbad – wir schaffen Atmosphäre. Mit stilvollen Decken, integrierter Beleuchtung, Akustikkomfort und unsichtbarer Klimatechnik.
                     </p>
-                    <a href="privat/index.html" class="btn btn-primary" style="display: inline-block; padding: 12px 30px;">Private Lösungen entdecken</a>
+                    <a href="privat/index.html" class="btn btn-primary">Private Lösungen entdecken</a>
                 </div>
 
                 <!-- Gewerbekunden -->
-                <div class="fade-in" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 40px; text-align: center; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.05);" onclick="window.location.href='gewerbe/index.html'" onmouseover="this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,0.05)'; this.style.transform='translateY(0)'">
+                <div class="service-card fade-in" onclick="window.location.href='gewerbe/index.html'">
                     <i data-lucide="building" style="width: 48px; height: 48px; color: var(--accent-color); margin-bottom: 20px;"></i>
-                    <h3 style="font-family: var(--font-headings); font-size: 28px; font-weight: 700; margin-bottom: 15px; color: var(--text-dark);">Gewerbekunden</h3>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 25px; font-size: 16px;">
+                    <h3>Gewerbekunden</h3>
+                    <p>
                         Funktion trifft Effizienz: Akustikdecken, Lüftung, Licht- und Klimatechnik für moderne Arbeitswelten. Technisch durchdacht – vom Meisterbetrieb umgesetzt.
                     </p>
-                    <a href="gewerbe/index.html" class="btn btn-secondary" style="display: inline-block; padding: 12px 30px;">Gewerbliche Lösungen entdecken</a>
+                    <a href="gewerbe/index.html" class="btn btn-secondary">Gewerbliche Lösungen entdecken</a>
                 </div>
 
             </div>
@@ -166,10 +171,10 @@
     <section class="section" style="background: var(--background-light);">
         <div class="e-con-boxed">
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <p class="fade-in" style="font-size: 20px; color: var(--text-dark); font-weight: 600; margin-bottom: 20px;">
+                <p class="fade-in" style="font-size: clamp(18px, 3vw, 20px); color: var(--text-dark); font-weight: 600; margin-bottom: 20px;">
                     Annotec Systems – Ihr Partner für stilvolle Deckenlösungen in Geilenkirchen und Umgebung.
                 </p>
-                <p class="fade-in" style="font-size: 18px; color: var(--text-light); line-height: 1.8;">
+                <p class="fade-in" style="font-size: clamp(16px, 2.5vw, 18px); color: var(--text-light); line-height: 1.8;">
                     Lassen Sie sich von hochwertigen Materialien, durchdachten Systemen und professioneller Umsetzung überzeugen.
                 </p>
             </div>
@@ -191,12 +196,12 @@
     <section class="section" style="background: var(--primary-color); color: white;">
         <div class="e-con-boxed">
             <div style="text-align: center;">
-                <h2 class="fade-in" style="font-family: var(--font-headings); font-size: 36px; font-weight: 600; margin-bottom: 20px; color: white;">Bereit für Ihre neue Decke?</h2>
-                <p class="fade-in" style="font-size: 20px; margin-bottom: 40px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h2 class="fade-in" style="font-family: var(--font-headings); font-size: clamp(28px, 5vw, 36px); font-weight: 600; margin-bottom: 20px; color: white;">Bereit für Ihre neue Decke?</h2>
+                <p class="fade-in" style="font-size: clamp(16px, 3vw, 20px); margin-bottom: 40px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
                     Kontaktieren Sie uns für eine kostenlose Beratung und lassen Sie sich von unseren Möglichkeiten überzeugen.
                 </p>
-                <div class="fade-in">
-                    <a href="kontakt.html" class="btn" style="background: white; color: var(--primary-color); margin-right: 20px;">Jetzt Kontakt aufnehmen</a>
+                <div class="fade-in" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="kontakt.html" class="btn" style="background: white; color: var(--primary-color);">Jetzt Kontakt aufnehmen</a>
                     <a href="tel:+4917131659369" class="btn" style="background: transparent; color: white; border: 2px solid white;">+49 171 31 65 936</a>
                 </div>
             </div>
