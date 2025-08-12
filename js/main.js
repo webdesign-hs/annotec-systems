@@ -24,16 +24,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Close mobile menu when clicking on a link
+    // Close mobile menu when clicking on a link (but not dropdown triggers)
     const navLinks = document.querySelectorAll('.nav-menu a');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
-                navMenu.classList.remove('active');
-                const spans = mobileToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                // Don't close menu if it's a dropdown trigger
+                const isDropdownTrigger = link.parentElement.classList.contains('has-dropdown');
+                if (!isDropdownTrigger) {
+                    navMenu.classList.remove('active');
+                    const spans = mobileToggle.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
             }
         });
     });
@@ -215,23 +219,35 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Mobile click behavior
-        const triggerLink = trigger.querySelector('a');
+        // Mobile click behavior - only for dropdown parent links
+        const triggerLink = trigger.querySelector('> a');
         if (triggerLink) {
             triggerLink.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    trigger.classList.toggle('active');
-                    
-                    // Close other dropdowns
-                    dropdownTriggers.forEach(otherTrigger => {
-                        if (otherTrigger !== trigger) {
-                            otherTrigger.classList.remove('active');
-                        }
-                    });
+                    const hasDropdown = trigger.querySelector('.dropdown-menu');
+                    if (hasDropdown) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        trigger.classList.toggle('active');
+                        
+                        // Close other dropdowns
+                        dropdownTriggers.forEach(otherTrigger => {
+                            if (otherTrigger !== trigger) {
+                                otherTrigger.classList.remove('active');
+                            }
+                        });
+                    }
                 }
             });
         }
+        
+        // Allow dropdown items to be clickable
+        const dropdownLinks = trigger.querySelectorAll('.dropdown-menu a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
     });
     
     // Lazy loading for images

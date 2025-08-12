@@ -60,7 +60,7 @@
                 
                 <nav class="navigation">
                     <ul class="nav-menu">
-                        <li><a href="kontakt.html" class="elegant-contact-btn" style="background: var(--primary-color); color: white; padding: 12px 24px; border-radius: 30px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(139, 195, 74, 0.3); font-size: 15px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(139, 195, 74, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(139, 195, 74, 0.3)'">Kontakt aufnehmen</a></li>
+                        <li><a href="kontakt.html" class="cta-button" style="background: var(--accent-color); color: var(--text-dark); padding: 10px 22px; border-radius: 25px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 3px 10px rgba(255, 193, 7, 0.3); font-size: 15px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(255, 193, 7, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 3px 10px rgba(255, 193, 7, 0.3)'">Kontakt aufnehmen</a></li>
                     </ul>
                 </nav>
                 
@@ -74,13 +74,8 @@
     </header>
 
     <!-- Hero Image -->
-    <section class="hero-image">
-        <img src="images/nachher_spanndecke_kueche-1-scaled-1.jpg" alt="Annotec Systems Deckenlösungen">
-        <div class="hero-overlay"></div>
-        <div class="hero-image-content">
-            <h1 class="fade-in">Stilvolle Deckenlösungen</h1>
-            <p class="fade-in">Verwandeln Sie Ihre Räume mit innovativen Spanndecken</p>
-        </div>
+    <section style="padding: 0; margin: 0; margin-top: 80px;">
+        <img src="images/nachher_spanndecke_kueche-1-scaled-1.jpg" alt="Annotec Systems Deckenlösungen" style="width: 100%; height: clamp(400px, 60vh, 550px); object-fit: cover; object-position: center; display: block;">
     </section>
 
     <!-- Divider -->
@@ -95,7 +90,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="section">
+    <section class="section" style="padding-top: 40px;">
         <div class="e-con-boxed">
             <div class="hero-content">
                 <p class="fade-in" style="font-family: var(--font-headings); font-size: clamp(18px, 5vw, 24px); font-weight: 600; margin-bottom: 30px; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;">ANNOTEC SYSTEMS</p>
@@ -130,7 +125,7 @@
     <!-- Service Selection -->
     <section class="section">
         <div class="e-con-boxed">
-            <div class="service-cards">
+            <div class="service-cards two-cards">
                 
                 <!-- Privatkunden -->
                 <div class="service-card fade-in" onclick="window.location.href='privat/index.html'">

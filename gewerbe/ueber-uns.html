@@ -33,7 +33,7 @@
                         </li>
                         <li><a href="ueber-uns.html" class="active">Über uns</a></li>
                         <li><a href="aktuelles.html">Aktuelles</a></li>
-                        <li><a href="kontakt.html" class="btn btn-primary cta-nav-button">Kontakt</a></li>
+                        <li><a href="kontakt.html" class="cta-button" style="background: var(--accent-color); color: var(--text-dark); padding: 10px 22px; border-radius: 25px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 3px 10px rgba(255, 193, 7, 0.3); font-size: 15px;">Kontakt</a></li>
                     </ul>
                 </nav>
                 
@@ -77,7 +77,7 @@
     <!-- Unternehmen -->
     <section class="section">
         <div class="e-con-boxed">
-            <div style="display: grid; grid-template-columns: 1fr; gap: 60px; align-items: center;">
+            <div class="hero-content-two-col">
                 <div class="fade-in">
                     <h2 style="font-family: var(--font-headings); font-size: clamp(24px, 4.5vw, 36px); font-weight: 600; margin-bottom: 30px; color: var(--text-dark);">Ihr Meisterbetrieb für Deckenlösungen</h2>
                     <p style="font-size: clamp(16px, 2.5vw, 18px); color: var(--text-light); line-height: 1.8; margin-bottom: 25px;">
@@ -94,7 +94,7 @@
                 <div class="fade-in" style="background: var(--primary-color); color: white; padding: 40px; border-radius: 20px; text-align: center;">
                     <h3 style="font-family: var(--font-headings); font-size: clamp(20px, 4vw, 32px); font-weight: 600; margin-bottom: 30px;">Unsere Zahlen</h3>
                     
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 30px; margin-bottom: 30px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
                         <div>
                             <div style="font-size: clamp(24px, 6vw, 48px); font-weight: 700; margin-bottom: 10px; color: white;">25+</div>
                             <div style="font-size: clamp(14px, 2.5vw, 18px); opacity: 0.9;">Jahre Erfahrung</div>
@@ -111,15 +111,6 @@
                             <div style="font-size: clamp(24px, 6vw, 48px); font-weight: 700; margin-bottom: 10px; color: white;">365</div>
                             <div style="font-size: clamp(14px, 2.5vw, 18px); opacity: 0.9;">Tage Service</div>
                         </div>
-                    </div>
-                    
-                    <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 25px;">
-                        <p style="font-size: 16px; line-height: 1.6; margin: 0;">
-                            <strong>Zertifizierter Meisterbetrieb</strong><br>
-                            Handwerkskammer Aachen<br>
-                            Mitglied der Fachvereinigung<br>
-                            Spanndecken Deutschland e.V.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -190,6 +181,60 @@
                     <h3 style="font-family: var(--font-headings); font-size: clamp(20px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Leidenschaft</h3>
                     <p style="color: var(--text-light); line-height: 1.7;">
                         Wir lieben, was wir tun. Diese Leidenschaft für perfekte Deckenlösungen spüren unsere Kunden in jedem Detail unserer Arbeit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifikationen & Zertifizierungen -->
+    <section class="section" style="background: var(--background-light);">
+        <div class="e-con-boxed">
+            <h2 class="section-title fade-in">Qualifikationen & Zertifizierungen</h2>
+            <p class="section-subtitle fade-in">Unsere Qualifikationen und Mitgliedschaften garantieren Ihnen höchste fachliche Kompetenz und Qualitätsstandards.</p>
+            
+            <div class="stats-grid" style="margin-top: 60px;">
+                <div class="fade-in" style="background: var(--background-white); padding: 30px; border-radius: 16px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <div style="width: 60px; height: 60px; background: var(--primary-color); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="award" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Meisterbetrieb</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; font-size: 14px;">
+                        Handwerkskammer Aachen<br>
+                        Meisterbrief im Maler- und Lackiererhandwerk
+                    </p>
+                </div>
+                
+                <div class="fade-in" style="background: var(--background-white); padding: 30px; border-radius: 16px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <div style="width: 60px; height: 60px; background: var(--accent-color); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="users" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Fachvereinigung</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; font-size: 14px;">
+                        Mitglied der Fachvereinigung<br>
+                        Spanndecken Deutschland e.V.
+                    </p>
+                </div>
+                
+                <div class="fade-in" style="background: var(--background-white); padding: 30px; border-radius: 16px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <div style="width: 60px; height: 60px; background: var(--primary-color); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="shield-check" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Qualitätssicherung</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; font-size: 14px;">
+                        ISO-zertifizierte Prozesse<br>
+                        Regelmäßige Weiterbildungen
+                    </p>
+                </div>
+                
+                <div class="fade-in" style="background: var(--background-white); padding: 30px; border-radius: 16px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <div style="width: 60px; height: 60px; background: var(--accent-color); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="file-check" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Gewerbezulassung</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; font-size: 14px;">
+                        Vollständig versichert<br>
+                        Alle erforderlichen Lizenzen
                     </p>
                 </div>
             </div>

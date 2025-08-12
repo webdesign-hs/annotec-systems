@@ -33,7 +33,7 @@
                         </li>
                         <li><a href="ueber-uns.html" class="active">Über uns</a></li>
                         <li><a href="aktuelles.html">Aktuelles</a></li>
-                        <li><a href="kontakt.html" class="btn btn-primary cta-nav-button">Kontakt</a></li>
+                        <li><a href="kontakt.html" class="cta-button" style="background: var(--accent-color); color: var(--text-dark); padding: 10px 22px; border-radius: 25px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 3px 10px rgba(255, 193, 7, 0.3); font-size: 15px;">Kontakt</a></li>
                     </ul>
                 </nav>
                 
@@ -112,15 +112,6 @@
                             <div style="font-size: clamp(14px, 2.5vw, 18px); opacity: 0.9;">Tage Service</div>
                         </div>
                     </div>
-                    
-                    <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 25px;">
-                        <p style="font-size: 16px; line-height: 1.6; margin: 0;">
-                            <strong>Zertifizierter Meisterbetrieb</strong><br>
-                            Handwerkskammer Aachen<br>
-                            Mitglied der Fachvereinigung<br>
-                            Spanndecken Deutschland e.V.
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -132,64 +123,118 @@
             <h2 class="section-title fade-in">Unsere Werte & Philosophie</h2>
             <p class="section-subtitle fade-in">Was uns antreibt und unsere Arbeit prägt.</p>
             
-            <div class="features-grid">
-                <div class="fade-in" style="background: var(--background-white); padding: 40px; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <div class="service-cards" style="margin-top: 60px;">
+                <div class="fade-in service-card">
                     <div style="width: 80px; height: 80px; background: var(--primary-color); border-radius: 50%; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center;">
                         <i data-lucide="award" style="width: 32px; height: 32px; color: white;"></i>
                     </div>
-                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Qualität</h3>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(20px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Qualität</h3>
                     <p style="color: var(--text-light); line-height: 1.7;">
                         Höchste Qualitätsstandards in Material und Verarbeitung. Jedes Projekt wird mit derselben Sorgfalt und Präzision umgesetzt, die unseren Ruf über Jahrzehnte geprägt hat.
                     </p>
                 </div>
                 
-                <div class="fade-in" style="background: var(--background-white); padding: 40px; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div class="fade-in service-card">
                     <div style="width: 80px; height: 80px; background: var(--accent-color); border-radius: 50%; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center;">
                         <i data-lucide="lightbulb" style="width: 32px; height: 32px; color: white;"></i>
                     </div>
-                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Innovation</h3>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(20px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Innovation</h3>
                     <p style="color: var(--text-light); line-height: 1.7;">
                         Wir entwickeln uns stetig weiter und integrieren modernste Technologien. Von LED-Integration bis zu Smart Home-Lösungen – wir denken voraus.
                     </p>
                 </div>
                 
-                <div class="fade-in" style="background: var(--background-white); padding: 40px; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div class="fade-in service-card">
                     <div style="width: 80px; height: 80px; background: var(--primary-color); border-radius: 50%; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center;">
                         <i data-lucide="leaf" style="width: 32px; height: 32px; color: white;"></i>
                     </div>
-                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Nachhaltigkeit</h3>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(20px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Nachhaltigkeit</h3>
                     <p style="color: var(--text-light); line-height: 1.7;">
                         Umweltbewusstes Handeln ist für uns selbstverständlich. Wir verwenden recycelbare Materialien und entwickeln energieeffiziente Lösungen.
                     </p>
                 </div>
                 
-                <div class="fade-in" style="background: var(--background-white); padding: 40px; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div class="fade-in service-card">
                     <div style="width: 80px; height: 80px; background: var(--accent-color); border-radius: 50%; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center;">
                         <i data-lucide="users" style="width: 32px; height: 32px; color: white;"></i>
                     </div>
-                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Partnerschaft</h3>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(20px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Partnerschaft</h3>
                     <p style="color: var(--text-light); line-height: 1.7;">
                         Wir verstehen uns als Partner unserer Kunden. Persönliche Beratung, zuverlässige Umsetzung und langfristige Betreuung stehen im Mittelpunkt.
                     </p>
                 </div>
                 
-                <div class="fade-in" style="background: var(--background-white); padding: 40px; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div class="fade-in service-card">
                     <div style="width: 80px; height: 80px; background: var(--primary-color); border-radius: 50%; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center;">
                         <i data-lucide="shield-check" style="width: 32px; height: 32px; color: white;"></i>
                     </div>
-                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Zuverlässigkeit</h3>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(20px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Zuverlässigkeit</h3>
                     <p style="color: var(--text-light); line-height: 1.7;">
                         Pünktlichkeit, Termintreue und verlässliche Kommunikation. Unsere Kunden können sich darauf verlassen, dass wir unsere Versprechen einhalten.
                     </p>
                 </div>
                 
-                <div class="fade-in" style="background: var(--background-white); padding: 40px; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div class="fade-in service-card">
                     <div style="width: 80px; height: 80px; background: var(--accent-color); border-radius: 50%; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center;">
                         <i data-lucide="heart" style="width: 32px; height: 32px; color: white;"></i>
                     </div>
-                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Leidenschaft</h3>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(20px, 3vw, 24px); font-weight: 600; margin-bottom: 20px;">Leidenschaft</h3>
                     <p style="color: var(--text-light); line-height: 1.7;">
                         Wir lieben, was wir tun. Diese Leidenschaft für perfekte Deckenlösungen spüren unsere Kunden in jedem Detail unserer Arbeit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifikationen & Zertifizierungen -->
+    <section class="section" style="background: var(--background-light);">
+        <div class="e-con-boxed">
+            <h2 class="section-title fade-in">Qualifikationen & Zertifizierungen</h2>
+            <p class="section-subtitle fade-in">Unsere Qualifikationen und Mitgliedschaften garantieren Ihnen höchste fachliche Kompetenz und Qualitätsstandards.</p>
+            
+            <div class="stats-grid" style="margin-top: 60px;">
+                <div class="fade-in" style="background: var(--background-white); padding: 30px; border-radius: 16px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <div style="width: 60px; height: 60px; background: var(--primary-color); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="award" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Meisterbetrieb</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; font-size: 14px;">
+                        Handwerkskammer Aachen<br>
+                        Meisterbrief im Maler- und Lackiererhandwerk
+                    </p>
+                </div>
+                
+                <div class="fade-in" style="background: var(--background-white); padding: 30px; border-radius: 16px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <div style="width: 60px; height: 60px; background: var(--accent-color); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="users" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Fachvereinigung</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; font-size: 14px;">
+                        Mitglied der Fachvereinigung<br>
+                        Spanndecken Deutschland e.V.
+                    </p>
+                </div>
+                
+                <div class="fade-in" style="background: var(--background-white); padding: 30px; border-radius: 16px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <div style="width: 60px; height: 60px; background: var(--primary-color); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="shield-check" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Qualitätssicherung</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; font-size: 14px;">
+                        ISO-zertifizierte Prozesse<br>
+                        Regelmäßige Weiterbildungen
+                    </p>
+                </div>
+                
+                <div class="fade-in" style="background: var(--background-white); padding: 30px; border-radius: 16px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <div style="width: 60px; height: 60px; background: var(--accent-color); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="file-check" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-headings); font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Gewerbezulassung</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; font-size: 14px;">
+                        Vollständig versichert<br>
+                        Alle erforderlichen Lizenzen
                     </p>
                 </div>
             </div>
