@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Mobile dropdown functionality
+    // Mobile dropdown functionality with smooth accordion
     const hasDropdowns = document.querySelectorAll('.has-dropdown');
     hasDropdowns.forEach(dropdown => {
         const link = dropdown.querySelector('a');
@@ -109,7 +109,33 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
+                    
+                    // Close other dropdowns
+                    hasDropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                            otherDropdown.classList.remove('active');
+                            const otherMenu = otherDropdown.querySelector('.dropdown-menu');
+                            if (otherMenu) {
+                                otherMenu.style.maxHeight = '0';
+                            }
+                        }
+                    });
+                    
+                    // Toggle current dropdown
                     dropdown.classList.toggle('active');
+                    
+                    // Smooth height animation
+                    if (dropdown.classList.contains('active')) {
+                        dropdownMenu.style.display = 'block';
+                        dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
+                    } else {
+                        dropdownMenu.style.maxHeight = '0';
+                        setTimeout(() => {
+                            if (!dropdown.classList.contains('active')) {
+                                dropdownMenu.style.display = 'none';
+                            }
+                        }, 300);
+                    }
                 }
             });
         }
