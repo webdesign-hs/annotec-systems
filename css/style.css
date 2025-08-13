@@ -206,19 +206,20 @@ body {
   transition: 0.3s;
   border-radius: 2px;
   display: block;
-  position: relative;
+  transform-origin: center;
 }
 
 .mobile-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: translateY(9px) rotate(45deg);
 }
 
 .mobile-toggle.active span:nth-child(2) {
   opacity: 0;
+  transform: scale(0);
 }
 
 .mobile-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 /* Hero Section */
@@ -586,6 +587,16 @@ body {
   margin-top: 60px;
 }
 
+/* Features Grid - Force 2x2 layout on desktop */
+@media (min-width: 769px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .feature-item {
   text-align: center;
 }
@@ -938,6 +949,13 @@ table tr:hover {
 
   .nav-menu li {
     width: 100%;
+  }
+  
+  .nav-menu > li:not(.has-dropdown):not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .nav-menu .has-dropdown {
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 
@@ -951,8 +969,8 @@ table tr:hover {
     display: inline-block;
     width: auto;
     padding: 12px 24px;
-    background: var(--accent-color);
-    color: var(--text-dark);
+    background: var(--accent-color) !important;
+    color: var(--text-dark) !important;
     border-radius: 25px;
     font-weight: 600;
     font-size: 15px;
@@ -963,7 +981,7 @@ table tr:hover {
 
   .nav-menu a {
     display: block;
-    padding: 18px 0;
+    padding: 12px 0;
     border-bottom: none;
     font-size: 16px;
     color: var(--text-dark);
@@ -975,7 +993,7 @@ table tr:hover {
   }
 
   .dropdown-menu {
-    position: static;
+    position: static !important;
     opacity: 1;
     visibility: visible;
     transform: none;
@@ -983,17 +1001,15 @@ table tr:hover {
     background: transparent;
     margin: 0;
     border-radius: 0;
-    display: none;
+    display: block !important;
     padding: 0;
-    max-height: 0;
+    max-height: 0 !important;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.3s ease !important;
   }
   
   .has-dropdown.active .dropdown-menu {
-    display: block;
-    max-height: 500px;
-    transition: max-height 0.3s ease-in;
+    max-height: 500px !important;
   }
 
   .dropdown-menu li {
@@ -1007,40 +1023,30 @@ table tr:hover {
   }
   
   .nav-menu .has-dropdown > a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 0;
+    display: block;
+    padding: 12px 35px 12px 0;
     font-size: 16px;
     font-weight: 400;
+    position: relative;
   }
   
   .nav-menu .has-dropdown > a::after {
     content: '+';
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 300;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    transition: all 0.3s ease;
-    background: transparent;
-    color: var(--text-light);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    flex-shrink: 0;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    color: var(--text-dark);
     line-height: 1;
-    padding-bottom: 3px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
   }
   
   .nav-menu .has-dropdown.active > a::after {
-    content: '−';
-    background: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-    transform: rotate(0deg);
+    content: '+';
+    color: var(--text-dark);
+    transform: rotate(45deg);
   }
   
   .dropdown-menu a {
@@ -1530,14 +1536,18 @@ img {
 
 @media (max-width: 768px) {
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
   }
 }
 
 @media (max-width: 480px) {
   .stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
 }
 

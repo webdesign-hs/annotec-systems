@@ -106,9 +106,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const dropdownMenu = dropdown.querySelector('.dropdown-menu');
         
         if (link && dropdownMenu) {
-            link.addEventListener('click', function(e) {
+            // Add click handler for the plus/minus toggle area
+            const toggleArea = document.createElement('span');
+            toggleArea.style.cssText = 'position: absolute; right: 0; top: 0; bottom: 0; width: 40px; cursor: pointer; z-index: 10;';
+            link.style.position = 'relative';
+            link.appendChild(toggleArea);
+            
+            toggleArea.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
+                    e.stopPropagation();
                     
                     // Close other dropdowns
                     hasDropdowns.forEach(otherDropdown => {
