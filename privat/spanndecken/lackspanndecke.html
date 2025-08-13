@@ -144,19 +144,42 @@
             <div style="max-width: 900px; margin: 0 auto;">
                 <h2 class="fade-in" style="font-family: var(--font-headings); font-size: 32px; font-weight: 600; margin-bottom: 50px; color: var(--text-dark); text-align: center;">FAQ</h2>
                 
-                <div class="fade-in" style="margin-bottom: 40px; padding: 30px; background: var(--background-light); border-radius: 12px;">
-                    <h4 style="font-family: var(--font-headings); font-size: 20px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Spiegelt eine Lackspanndecke wirklich wie ein Spiegel?</h4>
-                    <p style="font-size: 16px; color: var(--text-light); line-height: 1.7;">Die Reflexion einer Lackspanndecke ähnelt der eines Spiegels, ist aber weicher und dezenter. Je nach Lichteinfall und Betrachtungswinkel entstehen faszinierende Spiegeleffekte, die den Raum optisch vergrößern, ohne dabei aufdringlich zu wirken.</p>
-                </div>
-                
-                <div class="fade-in" style="margin-bottom: 40px; padding: 30px; background: var(--background-light); border-radius: 12px;">
-                    <h4 style="font-family: var(--font-headings); font-size: 20px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Zeigen sich Fingerabdrücke auf der Hochglanzoberfläche?</h4>
-                    <p style="font-size: 16px; color: var(--text-light); line-height: 1.7;">Die Decke befindet sich außerhalb der normalen Reichweite, sodass Fingerabdrücke kein Problem darstellen. Sollte doch einmal eine Reinigung nötig sein, lässt sich die glatte Oberfläche einfach mit einem weichen, feuchten Tuch säubern.</p>
-                </div>
-                
-                <div class="fade-in" style="margin-bottom: 40px; padding: 30px; background: var(--background-light); border-radius: 12px;">
-                    <h4 style="font-family: var(--font-headings); font-size: 20px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Eignen sich Lackspanndecken für alle Räume?</h4>
-                    <p style="font-size: 16px; color: var(--text-light); line-height: 1.7;">Ja, Lackspanndecken eignen sich für alle Wohnräume. Besonders eindrucksvoll wirken sie in Wohnzimmern, Eingangsbereichen oder Bädern. Durch ihre feuchtigkeitsbeständige Oberfläche sind sie auch für Feuchträume ideal geeignet.</p>
+                <div class="faq-accordion">
+                    <div class="faq-item fade-in" style="margin-bottom: 20px; border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden;">
+                        <div class="faq-question" style="padding: 25px; background: var(--background-light); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;" onclick="toggleFaq(this)">
+                            <h4 style="font-family: var(--font-headings); font-size: 20px; font-weight: 600; color: var(--text-dark); margin: 0;">Spiegelt eine Lackspanndecke wirklich wie ein Spiegel?</h4>
+                            <i data-lucide="chevron-down" style="width: 20px; height: 20px; color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                            <div style="padding: 25px; background: white;">
+                                <p style="font-size: 16px; color: var(--text-light); line-height: 1.7; margin: 0;">Die Reflexion einer Lackspanndecke ähnelt der eines Spiegels, ist aber weicher und dezenter. Je nach Lichteinfall und Betrachtungswinkel entstehen faszinierende Spiegeleffekte, die den Raum optisch vergrößern, ohne dabei aufdringlich zu wirken.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item fade-in" style="margin-bottom: 20px; border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden;">
+                        <div class="faq-question" style="padding: 25px; background: var(--background-light); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;" onclick="toggleFaq(this)">
+                            <h4 style="font-family: var(--font-headings); font-size: 20px; font-weight: 600; color: var(--text-dark); margin: 0;">Zeigen sich Fingerabdrücke auf der Hochglanzoberfläche?</h4>
+                            <i data-lucide="chevron-down" style="width: 20px; height: 20px; color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                            <div style="padding: 25px; background: white;">
+                                <p style="font-size: 16px; color: var(--text-light); line-height: 1.7; margin: 0;">Die Decke befindet sich außerhalb der normalen Reichweite, sodass Fingerabdrücke kein Problem darstellen. Sollte doch einmal eine Reinigung nötig sein, lässt sich die glatte Oberfläche einfach mit einem weichen, feuchten Tuch säubern.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item fade-in" style="margin-bottom: 20px; border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden;">
+                        <div class="faq-question" style="padding: 25px; background: var(--background-light); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;" onclick="toggleFaq(this)">
+                            <h4 style="font-family: var(--font-headings); font-size: 20px; font-weight: 600; color: var(--text-dark); margin: 0;">Eignen sich Lackspanndecken für alle Räume?</h4>
+                            <i data-lucide="chevron-down" style="width: 20px; height: 20px; color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                            <div style="padding: 25px; background: white;">
+                                <p style="font-size: 16px; color: var(--text-light); line-height: 1.7; margin: 0;">Ja, Lackspanndecken eignen sich für alle Wohnräume. Besonders eindrucksvoll wirken sie in Wohnzimmern, Eingangsbereichen oder Bädern. Durch ihre feuchtigkeitsbeständige Oberfläche sind sie auch für Feuchträume ideal geeignet.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -294,6 +317,35 @@
                 closeLightbox();
             }
         });
+
+        // FAQ Accordion functionality
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = element.querySelector('i[data-lucide="chevron-down"]');
+            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    const otherAnswer = item.querySelector('.faq-answer');
+                    const otherIcon = item.querySelector('i[data-lucide="chevron-down"]');
+                    otherAnswer.style.maxHeight = '0';
+                    if (otherIcon) {
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+            
+            // Toggle current FAQ item
+            if (isOpen) {
+                answer.style.maxHeight = '0';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
     </script>
     <!-- Floating Action Button -->
     <div class="fab-container">

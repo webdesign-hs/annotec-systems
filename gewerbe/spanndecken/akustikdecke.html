@@ -177,19 +177,42 @@
             <div style="max-width: 900px; margin: 0 auto;">
                 <h2 class="fade-in" style="font-family: var(--font-headings); font-size: 32px; font-weight: 600; margin-bottom: 50px; color: var(--text-dark); text-align: center;">FAQ</h2>
                 
-                <div class="fade-in" style="margin-bottom: 40px; padding: 30px; background: var(--background-light); border-radius: 12px;">
-                    <h4 style="font-family: var(--font-headings); font-size: 20px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Wie effektiv sind Akustikdecken in Großraumbüros?</h4>
-                    <p style="font-size: 16px; color: var(--text-light); line-height: 1.7;">Akustikdecken können in Großraumbüros den Lärmpegel um bis zu 50% reduzieren. Sie verbessern die Sprachverständlichkeit und schaffen akustische Zones of Privacy, ohne sichtbare Trennwände zu benötigen.</p>
-                </div>
-                
-                <div class="fade-in" style="margin-bottom: 40px; padding: 30px; background: var(--background-light); border-radius: 12px;">
-                    <h4 style="font-family: var(--font-headings); font-size: 20px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Eignen sich Akustikdecken für Videokonferenzen?</h4>
-                    <p style="font-size: 16px; color: var(--text-light); line-height: 1.7;">Ja, besonders gut. Akustikdecken reduzieren Echo und Nachhall drastisch, was zu kristallklarer Sprachübertragung in Videokonferenzen führt. Ein Muss für moderne Meeting-Räume und Home-Offices.</p>
-                </div>
-                
-                <div class="fade-in" style="margin-bottom: 40px; padding: 30px; background: var(--background-light); border-radius: 12px;">
-                    <h4 style="font-family: var(--font-headings); font-size: 20px; font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Wie sind die Wartungskosten für gewerbliche Akustikdecken?</h4>
-                    <p style="font-size: 16px; color: var(--text-light); line-height: 1.7;">Sehr gering. Die Oberflächen sind antistatisch und staubabweisend. Eine jährliche professionelle Reinigung reicht aus. Im Gegensatz zu textilen Lösungen nehmen sie keine Gerüche oder Feuchtigkeit auf.</p>
+                <div class="faq-accordion">
+                    <div class="faq-item fade-in" style="margin-bottom: 20px; border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden;">
+                        <div class="faq-question" style="padding: 25px; background: var(--background-light); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;" onclick="toggleFaq(this)">
+                            <h4 style="font-family: var(--font-headings); font-size: 20px; font-weight: 600; color: var(--text-dark); margin: 0;">Wie effektiv sind Akustikdecken in Großraumbüros?</h4>
+                            <i data-lucide="chevron-down" style="width: 20px; height: 20px; color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                            <div style="padding: 25px; background: white;">
+                                <p style="font-size: 16px; color: var(--text-light); line-height: 1.7; margin: 0;">Akustikdecken können in Großraumbüros den Lärmpegel um bis zu 50% reduzieren. Sie verbessern die Sprachverständlichkeit und schaffen akustische Zones of Privacy, ohne sichtbare Trennwände zu benötigen.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item fade-in" style="margin-bottom: 20px; border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden;">
+                        <div class="faq-question" style="padding: 25px; background: var(--background-light); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;" onclick="toggleFaq(this)">
+                            <h4 style="font-family: var(--font-headings); font-size: 20px; font-weight: 600; color: var(--text-dark); margin: 0;">Eignen sich Akustikdecken für Videokonferenzen?</h4>
+                            <i data-lucide="chevron-down" style="width: 20px; height: 20px; color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                            <div style="padding: 25px; background: white;">
+                                <p style="font-size: 16px; color: var(--text-light); line-height: 1.7; margin: 0;">Ja, besonders gut. Akustikdecken reduzieren Echo und Nachhall drastisch, was zu kristallklarer Sprachübertragung in Videokonferenzen führt. Ein Muss für moderne Meeting-Räume und Home-Offices.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item fade-in" style="margin-bottom: 20px; border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden;">
+                        <div class="faq-question" style="padding: 25px; background: var(--background-light); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;" onclick="toggleFaq(this)">
+                            <h4 style="font-family: var(--font-headings); font-size: 20px; font-weight: 600; color: var(--text-dark); margin: 0;">Wie sind die Wartungskosten für gewerbliche Akustikdecken?</h4>
+                            <i data-lucide="chevron-down" style="width: 20px; height: 20px; color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                            <div style="padding: 25px; background: white;">
+                                <p style="font-size: 16px; color: var(--text-light); line-height: 1.7; margin: 0;">Sehr gering. Die Oberflächen sind antistatisch und staubabweisend. Eine jährliche professionelle Reinigung reicht aus. Im Gegensatz zu textilen Lösungen nehmen sie keine Gerüche oder Feuchtigkeit auf.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -337,6 +360,35 @@
                 closeLightbox();
             }
         });
+
+        // FAQ Accordion functionality
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = element.querySelector('i[data-lucide="chevron-down"]');
+            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    const otherAnswer = item.querySelector('.faq-answer');
+                    const otherIcon = item.querySelector('i[data-lucide="chevron-down"]');
+                    otherAnswer.style.maxHeight = '0';
+                    if (otherIcon) {
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+            
+            // Toggle current FAQ item
+            if (isOpen) {
+                answer.style.maxHeight = '0';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
     </script>
 
     <!-- Floating Action Button -->

@@ -68,9 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
     
-    // Header scroll effect
+    // Header scroll effect and parallax
     let lastScrollTop = 0;
     const header = document.querySelector('.header');
+    const parallaxBg = document.querySelector('.parallax-bg');
+    const parallaxOverlay = document.querySelector('.parallax-overlay');
     
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -81,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
         }
+        
         
         lastScrollTop = scrollTop;
     }, { passive: true });
