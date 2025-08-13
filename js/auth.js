@@ -71,12 +71,17 @@
             // Password Toggle Funktionalität
             if (passwordToggle && passwordInput) {
                 passwordToggle.addEventListener('click', function() {
+                    const eyeIcon = document.getElementById('eyeIcon');
+                    const eyeOffIcon = document.getElementById('eyeOffIcon');
+                    
                     if (passwordInput.type === 'password') {
                         passwordInput.type = 'text';
-                        passwordToggle.textContent = '🙈';
+                        eyeIcon.style.display = 'none';
+                        eyeOffIcon.style.display = 'block';
                     } else {
                         passwordInput.type = 'password';
-                        passwordToggle.textContent = '👁️';
+                        eyeIcon.style.display = 'block';
+                        eyeOffIcon.style.display = 'none';
                     }
                 });
             }

@@ -198,6 +198,20 @@ body {
   margin: 3px 0;
   transition: 0.3s;
   border-radius: 2px;
+  display: block;
+  position: relative;
+}
+
+.mobile-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Hero Section */
@@ -392,6 +406,16 @@ body {
   color: #999;
 }
 
+.footer-bottom a {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: var(--primary-color);
+}
+
 /* Grid System for Product Cards */
 .product-grid {
   display: grid;
@@ -495,6 +519,23 @@ body {
   padding: 20px 0;
   background: var(--background-light);
   margin-top: 80px;
+}
+
+/* Header offset for sections after fixed header */
+.header-offset {
+  margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .header-offset {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-offset {
+    margin-top: 60px;
+  }
 }
 
 .breadcrumb-list {
@@ -781,6 +822,9 @@ table tr:hover {
 
   .nav-menu li:last-child {
     border-bottom: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
   }
 
   .nav-menu a {
@@ -800,9 +844,10 @@ table tr:hover {
     transform: none;
     box-shadow: none;
     background: var(--background-light);
-    margin: 10px 0;
-    border-radius: 8px;
+    margin: 8px 0 15px 0;
+    border-radius: 12px;
     display: none;
+    padding: 8px 0;
   }
   
   .has-dropdown.active .dropdown-menu {
@@ -811,26 +856,43 @@ table tr:hover {
   
   .nav-menu .has-dropdown > a {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    padding: 18px 0;
+    font-size: 16px;
+    font-weight: 500;
   }
   
   .nav-menu .has-dropdown > a::after {
     content: '+';
-    font-size: 24px;
-    font-weight: 300;
-    width: 30px;
-    height: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    transition: transform 0.3s ease;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    flex-shrink: 0;
   }
   
   .nav-menu .has-dropdown.active > a::after {
     content: '−';
-    transform: rotate(180deg);
+    background: var(--accent-color);
+    color: var(--text-dark);
+    transform: rotate(0deg);
+  }
+  
+  .dropdown-menu a {
+    padding: 12px 25px;
+    font-size: 15px;
+    margin: 2px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
   }
 
   /* Hero Sections */

@@ -9,18 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
-            
-            // Animate hamburger menu
-            const spans = mobileToggle.querySelectorAll('span');
-            if (navMenu.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
+            mobileToggle.classList.toggle('active');
         });
     }
     
@@ -33,10 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const isDropdownTrigger = link.parentElement.classList.contains('has-dropdown');
                 if (!isDropdownTrigger) {
                     navMenu.classList.remove('active');
-                    const spans = mobileToggle.querySelectorAll('span');
-                    spans[0].style.transform = 'none';
-                    spans[1].style.opacity = '1';
-                    spans[2].style.transform = 'none';
+                    mobileToggle.classList.remove('active');
                 }
             }
         });
@@ -103,208 +89,148 @@ document.addEventListener('DOMContentLoaded', function() {
     const serviceCards = document.querySelectorAll('.service-card');
     serviceCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px) scale(1.02)';
+            this.style.transform = 'translateY(-8px)';
+            this.style.boxShadow = '0 15px 40px rgba(139, 195, 74, 0.25)';
         });
         
         card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
+            this.style.transform = 'translateY(-5px)';
+            this.style.boxShadow = '0 10px 30px rgba(139, 195, 74, 0.2)';
         });
     });
     
-    // Form validation (if contact form exists)
-    const contactForm = document.querySelector('#contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-            
-            // Basic validation
-            let isValid = true;
-            const errors = [];
-            
-            if (!name || name.trim().length < 2) {
-                errors.push('Bitte geben Sie einen gültigen Namen ein.');
-                isValid = false;
-            }
-            
-            if (!email || !isValidEmail(email)) {
-                errors.push('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
-                isValid = false;
-            }
-            
-            if (!message || message.trim().length < 10) {
-                errors.push('Bitte geben Sie eine Nachricht mit mindestens 10 Zeichen ein.');
-                isValid = false;
-            }
-            
-            if (isValid) {
-                // Here you would typically send the form data to a server
-                showMessage('Vielen Dank für Ihre Nachricht! Wir melden uns bald bei Ihnen.', 'success');
-                this.reset();
-            } else {
-                showMessage(errors.join('<br>'), 'error');
-            }
-        });
-    }
-    
-    // Email validation helper
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-    
-    // Message display helper
-    function showMessage(message, type) {
-        // Remove existing message
-        const existingMessage = document.querySelector('.form-message');
-        if (existingMessage) {
-            existingMessage.remove();
-        }
+    // Mobile dropdown functionality
+    const hasDropdowns = document.querySelectorAll('.has-dropdown');
+    hasDropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
         
-        // Create new message element
-        const messageElement = document.createElement('div');
-        messageElement.className = `form-message ${type}`;
-        messageElement.innerHTML = message;
-        
-        // Style the message
-        messageElement.style.padding = '15px';
-        messageElement.style.marginTop = '20px';
-        messageElement.style.borderRadius = '8px';
-        messageElement.style.fontSize = '14px';
-        
-        if (type === 'success') {
-            messageElement.style.backgroundColor = '#d4edda';
-            messageElement.style.color = '#155724';
-            messageElement.style.border = '1px solid #c3e6cb';
-        } else {
-            messageElement.style.backgroundColor = '#f8d7da';
-            messageElement.style.color = '#721c24';
-            messageElement.style.border = '1px solid #f5c6cb';
-        }
-        
-        // Insert message after form
-        contactForm.parentNode.insertBefore(messageElement, contactForm.nextSibling);
-        
-        // Remove message after 5 seconds
-        setTimeout(() => {
-            messageElement.remove();
-        }, 5000);
-    }
-    
-    // Dropdown menu behavior for desktop and mobile
-    const dropdownTriggers = document.querySelectorAll('.has-dropdown');
-    dropdownTriggers.forEach(trigger => {
-        const dropdown = trigger.querySelector('.dropdown-menu');
-        let timeoutId;
-        
-        // Desktop hover behavior
-        if (window.innerWidth > 768) {
-            trigger.addEventListener('mouseenter', function() {
-                clearTimeout(timeoutId);
-                dropdown.style.opacity = '1';
-                dropdown.style.visibility = 'visible';
-                dropdown.style.transform = 'translateY(0)';
-            });
-            
-            trigger.addEventListener('mouseleave', function() {
-                timeoutId = setTimeout(() => {
-                    dropdown.style.opacity = '0';
-                    dropdown.style.visibility = 'hidden';
-                    dropdown.style.transform = 'translateY(-10px)';
-                }, 100);
-            });
-        }
-        
-        // Mobile click behavior - only for dropdown parent links
-        const triggerLink = trigger.querySelector('> a');
-        if (triggerLink) {
-            triggerLink.addEventListener('click', function(e) {
+        if (link && dropdownMenu) {
+            link.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
-                    const hasDropdown = trigger.querySelector('.dropdown-menu');
-                    if (hasDropdown) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        trigger.classList.toggle('active');
-                        
-                        // Close other dropdowns
-                        dropdownTriggers.forEach(otherTrigger => {
-                            if (otherTrigger !== trigger) {
-                                otherTrigger.classList.remove('active');
-                            }
-                        });
-                    }
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
                 }
             });
         }
+    });
+    
+    // Lightbox functionality
+    const lightboxImages = document.querySelectorAll('[onclick*="openLightbox"]');
+    if (lightboxImages.length > 0) {
+        // Create lightbox HTML
+        const lightboxHTML = `
+            <div id="lightbox" class="lightbox">
+                <div class="lightbox-content">
+                    <span class="lightbox-close">&times;</span>
+                    <img class="lightbox-image" src="" alt="">
+                    <div class="lightbox-caption"></div>
+                </div>
+            </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', lightboxHTML);
         
-        // Allow dropdown items to be clickable
-        const dropdownLinks = trigger.querySelectorAll('.dropdown-menu a');
-        dropdownLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-        });
-    });
-    
-    // Lazy loading for images
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
+        // Lightbox CSS
+        const lightboxCSS = `
+            .lightbox {
+                display: none;
+                position: fixed;
+                z-index: 9999;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0,0,0,0.9);
             }
-        });
-    });
+            .lightbox-content {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .lightbox-close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+                cursor: pointer;
+                z-index: 10000;
+            }
+            .lightbox-close:hover,
+            .lightbox-close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .lightbox-image {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+            .lightbox-caption {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+                height: 150px;
+            }
+            @media (max-width: 768px) {
+                .lightbox-content {
+                    width: 95%;
+                }
+                .lightbox-close {
+                    top: 10px;
+                    right: 20px;
+                    font-size: 30px;
+                }
+            }
+        `;
+        
+        const style = document.createElement('style');
+        style.textContent = lightboxCSS;
+        document.head.appendChild(style);
+    }
     
-    images.forEach(img => imageObserver.observe(img));
-    
-    // Initialize all animations on page load
-    setTimeout(() => {
-        const heroElements = document.querySelectorAll('.hero .fade-in');
-        heroElements.forEach((element, index) => {
-            setTimeout(() => {
-                element.classList.add('visible');
-            }, index * 200);
-        });
-    }, 500);
 });
 
-// Utility function for debouncing
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Window resize handler (debounced)
-const handleResize = debounce(() => {
-    // Close mobile menu on desktop view
-    if (window.innerWidth > 768) {
-        const navMenu = document.querySelector('.nav-menu');
-        const mobileToggle = document.querySelector('.mobile-toggle');
+// Global lightbox function
+function openLightbox(imageSrc, caption) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.querySelector('.lightbox-image');
+    const lightboxCaption = document.querySelector('.lightbox-caption');
+    
+    if (lightbox && lightboxImage && lightboxCaption) {
+        lightboxImage.src = imageSrc;
+        lightboxCaption.innerHTML = caption;
+        lightbox.style.display = 'block';
         
-        if (navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            
-            const spans = mobileToggle.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
+        // Close lightbox when clicking on close button or outside image
+        const closeBtn = document.querySelector('.lightbox-close');
+        closeBtn.onclick = function() {
+            lightbox.style.display = 'none';
         }
+        
+        lightbox.onclick = function(e) {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        }
+        
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                lightbox.style.display = 'none';
+            }
+        });
     }
-}, 250);
-
-window.addEventListener('resize', handleResize);
+}
